@@ -6,8 +6,16 @@ def download_video(url: str):
     video = video.order_by('resolution').desc().first()
     video.download()
 
+    # Para baixar as URLs digite na linha de comando:
+    # .venv\Scripts\activate
+    # python run.py
+
 if __name__ == '__main__':
-    video_urls = []
+    # Lista de URLs a serem baixadas
+    video_urls = [
+        # 'https://www.youtube.com/live/qbZsaBMxCJI'
+    ]
+
     ARRAY_SIZE = len(video_urls)
     COUNT = 1
 
